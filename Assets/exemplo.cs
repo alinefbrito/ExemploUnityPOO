@@ -25,11 +25,13 @@ public class exemplo : MonoBehaviour
 
         Item.QtdInstancias();
         Item i = new Item();
+        //parametros podem ser definidos no construtor
+        //Item i = new Item(nome, vlr, pode);
         i.Nome = nome;
         i.Valor = vlr;
         i.VendaPermitida = pode;
         i.LogInfo();
-        Equipamento eq = new Equipamento("Armadura", 100.50, true, 100, 50);
+        Equipamento eq = new Equipamento("armadura", 100.50, true, 100, 50);
         eq.LogInfo();
         int insteqpto  = Equipamento.NroInstancias();
         string nome_eq = eq.NomeEquipto();
@@ -42,7 +44,7 @@ public class exemplo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         vlr += 1.00;
+         vlr += 1.50;
         pode = !pode;
         Item item;
         if (pode)

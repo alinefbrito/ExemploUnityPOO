@@ -16,6 +16,8 @@ public class Item
     {
         Instancias += 1;
     }
+   
+
     //construtor com parâmetros de inicialização
     public  Item(string nome, double vlr, bool permitevenda)
     {
@@ -31,6 +33,14 @@ public class Item
         this.Valor = vlr;
         this.VendaPermitida = true;
     }
+    public Item(double vlr, bool permitevenda)
+    {
+        Instancias += 1;
+        this.Nome = "Não Informado";
+        this.VendaPermitida = permitevenda;
+
+    }
+
     //métodos
     public virtual void LogInfo()
     {
